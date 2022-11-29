@@ -26,6 +26,14 @@ searchBtn.addEventListener('click', function(event) {
   }
 });
 
+// have results show on pressing Enter
+cityInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchBtn").click();
+  }
+});
+
 keepButtons();
 
 function save() {
